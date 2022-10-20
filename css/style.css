@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+
+}
+
 .container{
     width: 70%;
     margin: 0 auto;
@@ -12,7 +17,13 @@
 /* utily */
 
 .debug{
-    background: 1px solid red;
+    border: 1px solid red;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* start header */
@@ -29,7 +40,39 @@
     main .margin-text p{
         text-align: center;
         margin-bottom: 30px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .row .col-card{
+        width: calc(100% / 3 - 20px);
+        float: left;
+        background-color: black;
+        margin-right: 30px;
+        margin-bottom: 35px;
+    }
+
+    .row .col-card:last-child{
+        margin: 0;
+    }
+
+    .col-card img{
+       height: 70px;
+       vertical-align: middle;
+    }
+
+    .info-card{
+        float: right;
+        width: calc(100% - 70px);
+        color: white;
+        font-size: 10px;
+        line-height: 16px;
+        padding: 12px 0 10px 10px;
+    }
+
+    a{
+        text-decoration: none;
+        color: rgb(109, 197, 237);
     }
 
 /* end main */
-
